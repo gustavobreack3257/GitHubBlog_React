@@ -1,8 +1,13 @@
-import * as S from './style'
+import { Profile } from "./components/Profile";
+import * as S from "./style";
 export function Home() {
-    return(
-        <S.HomeContainer>
-        <p>Home</p>
-        </S.HomeContainer>
-    )
+  return (
+    <S.HomeContainer>
+      <S.ProfileContent>
+      <Profile/>
+
+      <p>Home</p>
+      </S.ProfileContent>
+    </S.HomeContainer>
+  );
 }
