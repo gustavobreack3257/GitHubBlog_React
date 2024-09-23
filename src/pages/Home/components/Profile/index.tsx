@@ -3,7 +3,8 @@ import * as S from "./style";
 import GitHubSVG from "../../../../assets/githubBrands.svg";
 import BuildingSVG from "../../../../assets/buildingSolid.svg";
 import UserSVG from "../../../../assets/userGroupSolid.svg";
-import GitHubNavIconSVG from "../../../../assets/arrowUpRightIcon.svg";
+import { NavigationIcons } from "../../../../components/NavigationIcons";
+
 
 export function Profile() {
   return (
@@ -14,14 +15,9 @@ export function Profile() {
 
       <S.ContentProfile>
         <S.HeaderTitle>
-          <h2>Cameron Williamson</h2>
+          <h2>Gustavo Costa Souza</h2>
 
-          <S.NavigationWeb>
-            <a href="https://github.com/gustavobreack3257" target="_blank">
-              <p>Git Hub</p>
-              <img src={GitHubNavIconSVG} />
-            </a>
-          </S.NavigationWeb>
+          <NavigationIcons/>
         </S.HeaderTitle>
 
         <h4>
