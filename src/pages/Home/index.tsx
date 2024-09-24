@@ -1,4 +1,5 @@
 import { Profile } from './components/Profile';
+import { Search } from './components/Search';
 import * as S from './style';
 export function Home() {
   return (
@@ -6,7 +7,7 @@ export function Home() {
       <S.ProfileContent>
         <Profile />
 
-        <p>Home</p>
+        <Search />
       </S.ProfileContent>
     </S.HomeContainer>
   );

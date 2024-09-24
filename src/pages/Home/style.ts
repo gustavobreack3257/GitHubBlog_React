@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HomeContainer = styled.div`
   height: 100vh;
@@ -11,7 +11,7 @@ export const HomeContainer = styled.div`
   background: transparent;
 
   p {
-    color: ${(props) => props.theme["base-title"]};
+    color: ${(props) => props.theme['base-title']};
 
     font-size: ${(props) => props.theme.FontSize.LG}px;
   }
@@ -26,4 +26,4 @@ export const ProfileContent = styled.aside`
   gap: 4.5rem;
 
   //background-color: red;
-`
+`;
