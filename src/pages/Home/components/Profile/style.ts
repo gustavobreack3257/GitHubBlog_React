@@ -31,12 +31,6 @@ export const ProfileContainer = styled.div`
 export const ContentProfile = styled.div`
   height: 8.8125rem;
   width: 100%;
-
-  h4 {
-    margin-top: 0.5rem;
-    font-size: ${(props) => props.theme.FontSize.MD}px;
-    color: ${(props) => props.theme['base-text']};
-  }
 `;
 
 export const FooterSocialNetworks = styled.footer`

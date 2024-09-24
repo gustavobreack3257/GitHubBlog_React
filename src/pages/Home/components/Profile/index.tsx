@@ -5,6 +5,7 @@ import BuildingSVG from '../../../../assets/buildingSolid.svg';
 import UserSVG from '../../../../assets/userGroupSolid.svg';
 import { ApplicationIcons } from '../../../../components/ApplicationIcons';
 import { HeaderTitle } from '../HeaderTitle';
+import { DescriptionText } from '../../../../components/DescriptionText';
 
 export function Profile() {
   return (
@@ -16,11 +17,7 @@ export function Profile() {
       <S.ContentProfile>
         <HeaderTitle />
 
-        <h4>
-          Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu
-          viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat
-          pulvinar vel mass.
-        </h4>
+        <DescriptionText />
 
         <S.FooterSocialNetworks>
           <img src={GitHubSVG} />
