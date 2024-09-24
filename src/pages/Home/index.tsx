@@ -1,12 +1,12 @@
-import { Profile } from "./components/Profile";
-import * as S from "./style";
+import { Profile } from './components/Profile';
+import * as S from './style';
 export function Home() {
   return (
     <S.HomeContainer>
       <S.ProfileContent>
-      <Profile/>
+        <Profile />
 
-      <p>Home</p>
+        <p>Home</p>
       </S.ProfileContent>
     </S.HomeContainer>
   );

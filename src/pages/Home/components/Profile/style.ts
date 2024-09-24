@@ -7,7 +7,10 @@ export const ProfileContainer = styled.div`
   display: grid;
   grid-template-columns: 188px 1fr;
   gap: 2rem;
+
   padding: 2rem;
+  margin-top: -5rem;
+  border-radius: 0.625rem;
   background-color: ${(props) => props.theme["base-profile"]};
 
   aside {

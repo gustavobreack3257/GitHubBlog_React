@@ -1,10 +1,9 @@
-import * as S from "./style";
+import * as S from './style';
 
-import GitHubSVG from "../../../../assets/githubBrands.svg";
-import BuildingSVG from "../../../../assets/buildingSolid.svg";
-import UserSVG from "../../../../assets/userGroupSolid.svg";
-import { NavigationIcons } from "../../../../components/NavigationIcons";
-
+import GitHubSVG from '../../../../assets/githubBrands.svg';
+import BuildingSVG from '../../../../assets/buildingSolid.svg';
+import UserSVG from '../../../../assets/userGroupSolid.svg';
+import { NavigationIcons } from '../../../../components/NavigationIcons';
 
 export function Profile() {
   return (
@@ -17,7 +16,7 @@ export function Profile() {
         <S.HeaderTitle>
           <h2>Gustavo Costa Souza</h2>
 
-          <NavigationIcons/>
+          <NavigationIcons title="Git Hub" />
         </S.HeaderTitle>
 
         <h4>

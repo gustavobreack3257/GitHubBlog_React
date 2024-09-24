@@ -1,14 +1,21 @@
-import * as S from './style'
+import * as S from './style';
 
-import GitHubNavIconSVG from "../../assets/arrowUpRightIcon.svg";
-export function NavigationIcons(){
-    return(
-        <S.NavigationWeb>
+import GitHubNavIconSVG from '../../assets/arrowUpRightIcon.svg';
 
-            <p>Git Hub</p>
-            <a href="https://github.com/gustavobreack3257" target="_blank">
-              <img src={GitHubNavIconSVG} />
-            </a>
-          </S.NavigationWeb>
-    )
+interface NavigationIconsProps {
+  title: string;
+}
+export function NavigationIcons({ title }: NavigationIconsProps) {
+  return (
+    <S.NavigationWeb>
+      <p>{title}</p>
+      <a
+        href="https://github.com/gustavobreack3257"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <img src={GitHubNavIconSVG} alt="Ícone de navegação" />
+      </a>
+    </S.NavigationWeb>
+  );
 }
