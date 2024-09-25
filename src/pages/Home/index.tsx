@@ -11,6 +11,11 @@ export function Home() {
       <S.ContentCard>
         <PublishCard />
         <PublishCard />
+
+        <PublishCard />
+        <PublishCard />
+        <PublishCard />
+        <PublishCard />
       </S.ContentCard>
     </S.HomeContainer>
   );
