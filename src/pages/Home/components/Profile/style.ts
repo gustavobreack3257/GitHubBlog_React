@@ -10,6 +10,7 @@ export const ProfileContainer = styled.div`
 
   padding: 2rem;
   margin-top: -5rem;
+  margin-bottom: 4.5rem;
   border-radius: 0.625rem;
   background-color: ${(props) => props.theme['base-profile']};
 

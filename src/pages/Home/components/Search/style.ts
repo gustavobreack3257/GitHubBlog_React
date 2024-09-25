@@ -6,6 +6,7 @@ export const SearchContainer = styled.form`
 
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
   gap: 0.75rem;
   background-color: transparent;
 

@@ -17,13 +17,13 @@ export const HomeContainer = styled.div`
   }
 `;
 
-export const ProfileContent = styled.aside`
-  height: 23.5rem;
+export const ContentCard = styled.aside`
+  height: auto;
   width: 100%;
 
   display: flex;
   flex-direction: column;
-  gap: 4.5rem;
+  gap: 2rem;
 
-  //background-color: red;
+  background-color: red;
 `;
