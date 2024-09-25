@@ -1,9 +1,13 @@
 import * as S from './style';
 
-export function Title() {
+interface TitleProps {
+  title: string;
+  size?: S.sizesType;
+}
+export function Title({ title, size = 'big' }: TitleProps) {
   return (
-    <S.TitleContainer>
-      <h2>Gustavo Costa Souza</h2>;
+    <S.TitleContainer sizes={size}>
+      <h2>{title}</h2>;
     </S.TitleContainer>
   );
 }

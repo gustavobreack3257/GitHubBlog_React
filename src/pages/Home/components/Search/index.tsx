@@ -6,7 +6,7 @@ export function Search() {
     <S.SearchContainer>
       <S.PublicationsAndNumberOfPublications>
         <h4>Publicações</h4>
-        <SubTitle />
+        <SubTitle subtitle="6 publicações" />
       </S.PublicationsAndNumberOfPublications>
 
       <input type="text" placeholder="Buscar conteúdo" />

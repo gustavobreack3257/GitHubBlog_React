@@ -1,8 +1,12 @@
 import * as S from './style';
-export function SubTitle() {
+
+interface SubTitleProps {
+  subtitle: string;
+}
+export function SubTitle({ subtitle }: SubTitleProps) {
   return (
     <S.SubTitleContainer>
-      <p>6 publicações</p>
+      <p>{subtitle}</p>
     </S.SubTitleContainer>
   );
 }

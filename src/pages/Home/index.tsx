@@ -10,6 +10,7 @@ export function Home() {
 
       <S.ContentCard>
         <PublishCard />
+        <PublishCard />
       </S.ContentCard>
     </S.HomeContainer>
   );

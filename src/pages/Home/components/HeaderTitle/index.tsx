@@ -5,7 +5,7 @@ import { Title } from '../../../../components/Title';
 export function HeaderTitle() {
   return (
     <S.HeaderTitle>
-      <Title />
+      <Title title="Gustavo Costa Souza" />
 
       <NavigationIcons title="Git Hub" />
     </S.HeaderTitle>

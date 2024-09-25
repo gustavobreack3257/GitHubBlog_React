@@ -6,7 +6,7 @@ export const HomeContainer = styled.div`
 
   display: flex;
   flex-direction: column;
-  padding: 0 18rem;
+  padding: 0 16rem;
 
   background: transparent;
 
@@ -17,13 +17,12 @@ export const HomeContainer = styled.div`
   }
 `;
 
-export const ContentCard = styled.aside`
+export const ContentCard = styled.div`
   height: auto;
   width: 100%;
 
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-
-  background-color: red;
+  padding-bottom: 1rem;
 `;
