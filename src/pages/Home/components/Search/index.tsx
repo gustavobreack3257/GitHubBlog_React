@@ -1,3 +1,4 @@
+import { SubTitle } from '../../../../components/SubTitle';
 import * as S from './style';
 
 export function Search() {
@@ -5,7 +6,7 @@ export function Search() {
     <S.SearchContainer>
       <S.PublicationsAndNumberOfPublications>
         <h4>Publicações</h4>
-        <p>6 publicações</p>
+        <SubTitle />
       </S.PublicationsAndNumberOfPublications>
 
       <input type="text" placeholder="Buscar conteúdo" />

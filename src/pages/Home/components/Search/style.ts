@@ -43,9 +43,4 @@ export const PublicationsAndNumberOfPublications = styled.div`
     font-size: ${(props) => props.theme.FontSize.LG}px;
     color: ${(props) => props.theme['base-subtitle']};
   }
-
-  p {
-    font-size: ${(props) => props.theme.FontSize.SM}px !important;
-    color: ${(props) => props.theme['base-span']} !important;
-  }
 `;
