@@ -45,7 +45,7 @@ export const PublicationsAndNumberOfPublications = styled.div`
   }
 
   p {
-    font-size: ${(props) => props.theme.FontSize.SM}px;
-    color: ${(props) => props.theme['base-span']};
+    font-size: ${(props) => props.theme.FontSize.SM}px !important;
+    color: ${(props) => props.theme['base-span']} !important;
   }
 `;

@@ -20,14 +20,9 @@ export function Profile() {
         <DescriptionText />
 
         <S.FooterSocialNetworks>
-          <img src={GitHubSVG} />
-          <p>gustavobreack3257</p>
-
-          <img src={BuildingSVG} />
-          <p>Rocketseat</p>
-
-          <img src={UserSVG} />
-          <p>32 seguidores</p>
+          <ApplicationIcons subTitle="gustavobrack3257" IconsVariant="gitHub" />
+          <ApplicationIcons subTitle="Rocketseat" IconsVariant="building" />
+          <ApplicationIcons subTitle="32 seguidores" IconsVariant="user" />
         </S.FooterSocialNetworks>
       </S.ContentProfile>
     </S.ProfileContainer>

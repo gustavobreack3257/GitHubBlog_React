@@ -33,23 +33,15 @@ export const ContentProfile = styled.div`
   width: 100%;
 `;
 
-export const FooterSocialNetworks = styled.footer`
-  height: 1.75rem;
-  width: auto;
+export const FooterSocialNetworks = styled.div`
+  height: 2rem;
+  width: 100%;
 
   display: flex;
   flex-direction: row;
-  align-items: center;
   margin-top: 1.5rem;
-  gap: 0.5rem;
-
-  p {
-    margin-right: 1rem;
-    text-align: center;
-    font-size: ${(props) => props.theme.FontSize.MD}px;
-  }
-
-  //color: ${(props) => props.theme.blue};
-  //font-weight: ${(props) => props.theme.FontWeight.bold};
-  //font-size: ${(props) => props.theme.FontSize.SS};
 `;
+
+// color: ${(props) => props.theme.blue};
+// font-weight: ${(props) => props.theme.FontWeight.bold};
+// font-size: ${(props) => props.theme.FontSize.SS};
