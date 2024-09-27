@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PostContainer = styled.div`
-    height: 100px;
-    width: 100%;
+  height: auto;
+  width: 100%;
 
-    p{
-        color: ${props => props.theme["base-title"]};
-
-    }
-`
+  display: flex;
+  flex-direction: column;
+  padding: 0 16rem;
+`;

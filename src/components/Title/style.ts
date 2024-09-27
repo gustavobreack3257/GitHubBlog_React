@@ -7,7 +7,7 @@ interface TitleContainerProps {
 }
 export const TitleContainer = styled.div<TitleContainerProps>`
   height: 2rem;
-  width: 18.75rem;
+  width: auto;
 
   h2 {
     color: ${(props) => props.theme['base-title']};

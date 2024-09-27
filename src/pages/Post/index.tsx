@@ -1,8 +1,9 @@
-import * as S from "./style";
+import { PostInfo } from './components/PostInfo';
+import * as S from './style';
 export function Post() {
   return (
     <S.PostContainer>
-      <p>Post</p>
+      <PostInfo />
     </S.PostContainer>
   );
 }
