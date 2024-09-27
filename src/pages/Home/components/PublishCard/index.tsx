@@ -1,3 +1,4 @@
+import { DescriptionText } from '../../../../components/DescriptionText';
 import { SubTitle } from '../../../../components/SubTitle';
 import { Title } from '../../../../components/Title';
 import * as S from './style';
@@ -12,6 +13,8 @@ export function PublishCard() {
 
         <SubTitle subtitle="há 1 dia" />
       </S.HeaderCard>
+
+      <DescriptionText />
     </S.PublishCardContainer>
   );
 }
