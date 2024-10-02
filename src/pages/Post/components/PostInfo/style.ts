@@ -9,7 +9,7 @@ export const PostInfoContainer = styled.div`
   gap: 1.25rem;
   padding: 2rem;
   margin-top: -5rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 2.5rem;
   border-radius: 0.625rem;
   background-color: ${(props) => props.theme['base-profile']};
 

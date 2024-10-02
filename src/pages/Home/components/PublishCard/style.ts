@@ -10,7 +10,12 @@ export const PublishCardContainer = styled.button`
   border-radius: 0.625rem;
   padding: 2rem;
   gap: 1.25rem;
+  cursor: pointer;
   background-color: ${(props) => props.theme['base-post']};
+
+  a {
+    text-decoration: none;
+  }
 
   &:hover {
     border: 1px solid ${(props) => props.theme['base-label']};

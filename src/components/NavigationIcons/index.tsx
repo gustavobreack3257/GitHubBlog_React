@@ -2,6 +2,7 @@ import * as S from './style';
 
 import GitHubNavIconSVG from '../../assets/arrowUpRightIcon.svg';
 import GoBackSVG from '../../assets/chevronLeftSolid.svg';
+import { NavLink } from 'react-router-dom';
 
 interface NavigationIconsProps {
   title: string;
@@ -26,13 +27,9 @@ export function NavigationIcons({
         </S.NavigationWeb>
       ) : (
         <S.NavigationWeb>
-          <a
-            href="https://github.com/gustavobreack3257"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <NavLink to="/" title="Chevron">
             <img src={GoBackSVG} alt="Ícone de navegação" />
-          </a>
+          </NavLink>
           <p>{title}</p>
         </S.NavigationWeb>
       )}
