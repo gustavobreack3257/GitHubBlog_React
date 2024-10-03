@@ -3,33 +3,13 @@ import * as S from './style';
 import { ApplicationIcons } from '../../../../components/ApplicationIcons';
 import { HeaderTitle } from '../HeaderTitle';
 import { DescriptionText } from '../../../../components/DescriptionText';
-import { useEffect, useState } from 'react';
 
-interface Profiles {
-  id: number;
-  name: string;
-  description: string;
-  photo: string;
-  github: string;
-  gitHubProfile: string;
-  enterprise: string;
-  followers: string;
-}
+import { useContext } from 'react';
+import { PostsContext } from '../../../../contexts/PostsContext';
 
 export function Profile() {
-  const [profiles, setProfiles] = useState<Profiles[]>([]);
+  const { profiles } = useContext(PostsContext);
 
-  async function LoadProfiles() {
-    const response = await fetch('http://localhost:3333/profile');
-    const data = await response.json();
-
-    setProfiles(data);
-  }
-
-  useEffect(() => {
-    console.log(profiles);
-    LoadProfiles();
-  }, [profiles]);
   return (
     <S.ProfileContainer>
       <aside>
