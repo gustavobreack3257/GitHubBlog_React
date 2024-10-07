@@ -1,13 +1,15 @@
+import { useContext } from 'react';
 import * as S from './style';
+import { PostsContext } from '../../contexts/PostsContext';
 
-interface TitleProps {
+interface Props {
   title: string;
-  size?: S.sizesType;
+  size: S.sizesType;
 }
-export function Title({ title, size = 'big' }: TitleProps) {
+export function Title({ size = 'big', title }: Props) {
   return (
     <S.TitleContainer sizes={size}>
-      <h2>{title}</h2>;
+      <h2>{title}</h2>
     </S.TitleContainer>
   );
 }

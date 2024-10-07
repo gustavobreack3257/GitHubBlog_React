@@ -1,24 +1,25 @@
+import { useContext } from 'react';
 import * as S from './style';
+import { PostsContext } from '../../contexts/PostsContext';
 
 interface DescriptionProps {
   variant?: 'home' | 'post' | 'postCard';
 }
 export function DescriptionText({ variant = 'home' }: DescriptionProps) {
+  const { profiles } = useContext(PostsContext);
   return (
     <S.DescriptionContainer>
       {variant === 'home' ? (
-        <h4>
-          Uma massa está em busca da evolução, uma das portas para essa
-          transformação é a tecnologia. Eu quero fazer parte dessa história, e
-          realizar grandes feitos.
-        </h4>
+        profiles.map((profile) => {
+          return <h4 key={profile.id}>{profile.description}</h4>;
+        })
       ) : variant === 'postCard' ? (
         <h4>
           Todas as linguagens de programação possuem estruturas de dados
           integradas, mas geralmente diferem de uma linguagem para outra. Este
           artigo tenta listar as estruturas de dados integradas disponíveis em
           JavaScript e quais propriedades elas possuem. Eles podem ser usados
-          ​​para construir outras estruturas de dados. Sempre que possível, são
+          para construir outras estruturas de dados. Sempre que possível, são
           feitas comparações com outras línguas.
         </h4>
       ) : (

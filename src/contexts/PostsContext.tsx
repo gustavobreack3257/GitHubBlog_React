@@ -11,7 +11,7 @@ interface Profiles {
   followers: string;
 }
 
-interface Post {
+interface Posts {
   id: number;
   title: string;
   span: string;
@@ -22,7 +22,7 @@ interface Post {
 }
 
 interface ProfilesAndPostsContextType {
-  posts: Post[];
+  posts: Posts[];
   profiles: Profiles[];
 }
 
@@ -33,7 +33,7 @@ interface PostsProviderProps {
 export const PostsContext = createContext({} as ProfilesAndPostsContextType);
 
 export function PostsProvider({ children }: PostsProviderProps) {
-  const [posts, setPosts] = useState<Post[]>([]);
+  const [posts, setPosts] = useState<Posts[]>([]);
   const [profiles, setProfiles] = useState<Profiles[]>([]);
 
   async function LoadProfiles() {

@@ -9,7 +9,7 @@ export const HomeContainer = styled.div`
   padding: 0 16rem;
 `;
 
-export const ContentCard = styled.div`
+export const ContentCard = styled.main`
   height: auto;
   width: 100%;
 

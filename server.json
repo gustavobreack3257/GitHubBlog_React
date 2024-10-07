@@ -3,7 +3,7 @@
         {
             "id": 1,
             "name": "Gustavo costa souza",
-            "description": "Uma massa está em busca da evolução, uma das portas é a tecnologia. Eu quero fazer parte dessa história. E junto com a massa realizar grandes feitos.",
+            "description": "Tristique volutpat pulvinar vel massa, pellentesque egestas. Eu viverra massa quam dignissim aenean malesuada suscipit. Nunc, volutpat pulvinar vel mass.",
             "photo": "https://github.com/gustavobreack3257.png",
             "github": "https://github.com/gustavobreack3257",
             "gitHubProfile": "gustavobreack3257",
@@ -11,55 +11,19 @@
             "followers": 32
         }
     ],
-    "posts": [
+ "posts": [
+        {
+            "id": 1,
+            "title": "JavaScript data types and data structures",
+            "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
+            "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
+            "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
+            "comments": 5,
+            "createdAt": "2024-10-01T18:58:45.738Z"
+        },
         {
             "id": 2,
-            "title": "JavaScript data types and data structures",
-            "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
-            "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
-            "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
-            "comments": 5,
-            "createdAt": "2024-10-01T18:58:45.738Z"
-        },
-        {
-            "id": 3,
-            "title": "JavaScript data types and data structures",
-            "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
-            "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
-            "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
-            "comments": 5,
-            "createdAt": "2024-10-01T18:58:45.738Z"
-        },
-        {
-            "id": 4,
-            "title": "JavaScript data types and data structures",
-            "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
-            "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
-            "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
-            "comments": 5,
-            "createdAt": "2024-10-01T18:58:45.738Z"
-        },
-        {
-            "id": 5,
-            "title": "JavaScript data types and data structures",
-            "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
-            "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
-            "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
-            "comments": 5,
-            "createdAt": "2024-10-01T18:58:45.738Z"
-        },
-        {
-            "id": 6,
-            "title": "JavaScript data types and data structures",
-            "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
-            "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
-            "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
-            "comments": 5,
-            "createdAt": "2024-10-01T18:58:45.738Z"
-        },
-        {
-            "id": 7,
-            "title": "JavaScript data types and data structures",
+            "title": "Python data types and data structures",
             "span": "Programming languages all have built-in data structures, but these often differ from one language to another.",
             "description": "This article attempts to list the built-in data structures available in JavaScript and what properties they have. These can be used to build other data structures. Wherever possible, comparisons with other languages are drawn.",
             "descriptionSubSection": "JavaScript is a loosely typed and dynamic language. Variables in JavaScript are not directly associated with any particular value type, and any variable can be assigned (and re-assigned) values of all types:",
