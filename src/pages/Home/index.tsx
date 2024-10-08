@@ -1,22 +1,19 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Profile } from './components/Profile';
 import { PublishCard } from './components/PublishCard';
 import { Search } from './components/Search';
 import * as S from './style';
-import { PostsContext } from '../../contexts/PostsContext';
+import { ProfileContext } from '../../contexts/ProfileContext';
 export function Home() {
-  const { posts } = useContext(PostsContext);
+  const { profile } = useContext(ProfileContext);
+
   return (
     <S.HomeContainer>
       <Profile />
 
       <Search />
 
-      <S.ContentCard>
-        {posts.map((post) => {
-          return <PublishCard key={post.id} />;
-        })}
-      </S.ContentCard>
+      <S.ContentCard>{profile.posts ? <PublishCard /> : null}</S.ContentCard>
     </S.HomeContainer>
   );
 }

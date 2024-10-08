@@ -1,18 +1,16 @@
 import { useContext } from 'react';
 import * as S from './style';
-import { PostsContext } from '../../contexts/PostsContext';
+import { ProfileContext } from '../../contexts/ProfileContext';
 
 interface DescriptionProps {
   variant?: 'home' | 'post' | 'postCard';
 }
 export function DescriptionText({ variant = 'home' }: DescriptionProps) {
-  const { profiles } = useContext(PostsContext);
+  const { profile } = useContext(ProfileContext);
   return (
     <S.DescriptionContainer>
       {variant === 'home' ? (
-        profiles.map((profile) => {
-          return <h4 key={profile.id}>{profile.description}</h4>;
-        })
+        <h4>{profile.description}</h4>
       ) : variant === 'postCard' ? (
         <h4>
           Todas as linguagens de programação possuem estruturas de dados

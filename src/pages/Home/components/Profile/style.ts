@@ -34,6 +34,15 @@ export const ContentProfile = styled.div`
   width: 100%;
 `;
 
+export const HeaderTitle = styled.header`
+  height: 2rem;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
 export const FooterSocialNetworks = styled.div`
   height: 2rem;
   width: 100%;

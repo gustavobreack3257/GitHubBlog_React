@@ -1,48 +1,44 @@
 import * as S from './style';
 
 import { ApplicationIcons } from '../../../../components/ApplicationIcons';
-import { HeaderTitle } from '../HeaderTitle';
 import { DescriptionText } from '../../../../components/DescriptionText';
 
 import { useContext } from 'react';
-import { PostsContext } from '../../../../contexts/PostsContext';
+import { ProfileContext } from '../../../../contexts/ProfileContext';
+import { Title } from '../../../../components/Title';
+import { NavigationIcons } from '../../../../components/NavigationIcons';
 
 export function Profile() {
-  const { profiles } = useContext(PostsContext);
+  const { profile } = useContext(ProfileContext);
 
   return (
     <S.ProfileContainer>
       <aside>
-        {profiles.map((profile) => {
-          return (
-            <img key={profile.id} src={profile.photo} alt="Imagem do perfil" />
-          );
-        })}
+        <img src={profile.photo} alt="Imagem do perfil" />
       </aside>
 
       <S.ContentProfile>
-        <HeaderTitle />
+        <S.HeaderTitle>
+          <Title size="big" title={profile.name} />;
+          <NavigationIcons title="Git Hub" />
+        </S.HeaderTitle>
 
         <DescriptionText />
 
-        {profiles.map((profile) => {
-          return (
-            <S.FooterSocialNetworks key={profile.id}>
-              <ApplicationIcons
-                subTitle={profile.gitHubProfile}
-                IconsVariant="gitHub"
-              />
-              <ApplicationIcons
-                subTitle={profile.enterprise}
-                IconsVariant="building"
-              />
-              <ApplicationIcons
-                subTitle={` ${profile.followers} seguidores`}
-                IconsVariant="user"
-              />
-            </S.FooterSocialNetworks>
-          );
-        })}
+        <S.FooterSocialNetworks>
+          <ApplicationIcons
+            subTitle={profile.gitHubProfile}
+            IconsVariant="gitHub"
+          />
+          <ApplicationIcons
+            subTitle={profile.enterprise}
+            IconsVariant="building"
+          />
+          <ApplicationIcons
+            subTitle={` ${profile.followers} seguidores`}
+            IconsVariant="user"
+          />
+        </S.FooterSocialNetworks>
       </S.ContentProfile>
     </S.ProfileContainer>
   );

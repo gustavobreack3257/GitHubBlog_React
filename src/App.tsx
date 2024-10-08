@@ -4,16 +4,16 @@ import { GlobalStyle } from './styles/Global';
 
 import { BrowserRouter } from 'react-router-dom';
 import { Router } from './Router';
-import { PostsProvider } from './contexts/PostsContext';
+import { ProfileProvider } from './contexts/ProfileContext';
 
 export function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
       <BrowserRouter>
         <GlobalStyle />
-        <PostsProvider>
+        <ProfileProvider>
           <Router />
-        </PostsProvider>
+        </ProfileProvider>
       </BrowserRouter>
     </ThemeProvider>
   );

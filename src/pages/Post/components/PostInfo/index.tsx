@@ -11,7 +11,10 @@ export function PostInfo() {
         <NavigationIcons title="VER NO GITHUB" />
       </S.Header>
       <aside>
-        <Title title="JavaScript data types and data structures" />
+        <Title
+          size="average"
+          title="JavaScript data types and data structures"
+        />
 
         <footer>
           <ApplicationIcons

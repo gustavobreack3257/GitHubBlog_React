@@ -4,17 +4,17 @@ import { SubTitle } from '../../../../components/SubTitle';
 import { Title } from '../../../../components/Title';
 import * as S from './style';
 import { useContext } from 'react';
-import { PostsContext } from '../../../../contexts/PostsContext';
+import { ProfileContext } from '../../../../contexts/ProfileContext';
 export function PublishCard() {
-  const { posts } = useContext(PostsContext);
+  const { profile } = useContext(ProfileContext);
   return (
     <S.PublishCardContainer>
       <NavLink to="/Post" title="Publish Card">
-        {posts.map((post) => {
+        {profile.posts.map((post) => {
           return (
             <S.HeaderCard key={post.id}>
               <Title size="average" title={post.title} />
-              <SubTitle subtitle="há 1 dia" />{' '}
+              <SubTitle subtitle="há 1 dia" />
             </S.HeaderCard>
           );
         })}

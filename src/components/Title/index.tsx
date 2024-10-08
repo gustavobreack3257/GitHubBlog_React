@@ -1,6 +1,4 @@
-import { useContext } from 'react';
 import * as S from './style';
-import { PostsContext } from '../../contexts/PostsContext';
 
 interface Props {
   title: string;

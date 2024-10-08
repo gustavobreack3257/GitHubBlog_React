@@ -1,6 +1,6 @@
-import * as S from "./style";
+import * as S from './style';
 
-import LogoSVG from "../../assets/Logo.svg";
+import LogoSVG from '../../assets/Logo.svg';
 
 export function Header() {
   return (
