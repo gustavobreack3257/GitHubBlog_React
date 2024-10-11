@@ -3,14 +3,14 @@ import * as S from './style';
 import { ApplicationIcons } from '../../../../components/ApplicationIcons';
 import { DescriptionText } from '../../../../components/DescriptionText';
 
-import { useContext } from 'react';
-import { ProfileContext } from '../../../../contexts/ProfileContext';
+import { ProfileProps } from '../../../../contexts/ProfileContext';
 import { Title } from '../../../../components/Title';
 import { NavigationIcons } from '../../../../components/NavigationIcons';
 
-export function Profile() {
-  const { profile } = useContext(ProfileContext);
-
+interface ProfileCardProps {
+  profile: ProfileProps;
+}
+export function Profile({ profile }: ProfileCardProps) {
   return (
     <S.ProfileContainer>
       <aside>
@@ -23,8 +23,7 @@ export function Profile() {
           <NavigationIcons title="Git Hub" />
         </S.HeaderTitle>
 
-        <DescriptionText />
-
+        <S.Description>{profile.description}</S.Description>
         <S.FooterSocialNetworks>
           <ApplicationIcons
             subTitle={profile.gitHubProfile}

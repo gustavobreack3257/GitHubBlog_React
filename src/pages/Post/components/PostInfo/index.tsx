@@ -3,7 +3,18 @@ import { NavigationIcons } from '../../../../components/NavigationIcons';
 import { Title } from '../../../../components/Title';
 import * as S from './style';
 
-export function PostInfo() {
+interface PostInfoProps {
+  titlePost: string;
+  gitHubName: string;
+  duration: string;
+  comments: string;
+}
+export function PostInfo({
+  titlePost,
+  gitHubName,
+  duration,
+  comments,
+}: PostInfoProps) {
   return (
     <S.PostInfoContainer>
       <S.Header>
@@ -11,18 +22,12 @@ export function PostInfo() {
         <NavigationIcons title="VER NO GITHUB" />
       </S.Header>
       <aside>
-        <Title
-          size="average"
-          title="JavaScript data types and data structures"
-        />
+        <Title size="average" title={titlePost} />
 
         <footer>
-          <ApplicationIcons
-            subTitle="gustavobreack3257"
-            IconsVariant="gitHub"
-          />
-          <ApplicationIcons subTitle="Há 1 dia" IconsVariant="calendar" />
-          <ApplicationIcons subTitle="5 comentários" IconsVariant="comment" />
+          <ApplicationIcons subTitle={gitHubName} IconsVariant="gitHub" />
+          <ApplicationIcons subTitle={duration} IconsVariant="calendar" />
+          <ApplicationIcons subTitle={comments} IconsVariant="comment" />
         </footer>
       </aside>
     </S.PostInfoContainer>

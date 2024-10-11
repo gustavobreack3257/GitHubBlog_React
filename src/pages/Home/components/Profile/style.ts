@@ -43,6 +43,13 @@ export const HeaderTitle = styled.header`
   justify-content: space-between;
 `;
 
+export const Description = styled.p`
+  margin-top: 0.5rem;
+  font-weight: ${(props) => props.theme.FontWeight.regular};
+  font-size: ${(props) => props.theme.FontSize.MD}px;
+  color: ${(props) => props.theme['base-text']};
+`;
+
 export const FooterSocialNetworks = styled.div`
   height: 2rem;
   width: 100%;

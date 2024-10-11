@@ -1,6 +1,13 @@
-import { createContext, ReactNode, useEffect, useState } from 'react';
+import {
+  createContext,
+  ReactNode,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react';
+import { api } from '../lib/axios';
 
-interface Posts {
+export interface PostsProps {
   id: string;
   title: string;
   span: string;
@@ -10,7 +17,7 @@ interface Posts {
   createdAt: string;
 }
 
-interface Profile {
+export interface ProfileProps {
   id: string;
   name: string;
   description: string;
@@ -19,11 +26,12 @@ interface Profile {
   gitHubProfile: string;
   enterprise: string;
   followers: string;
-  posts: Posts[];
+  posts: PostsProps[];
 }
 
 interface ProfileContextType {
-  profile: Profile;
+  profile: ProfileProps;
+  searchProfile: (search: string) => void;
 }
 
 interface ProfileProviderProps {
@@ -33,23 +41,45 @@ interface ProfileProviderProps {
 export const ProfileContext = createContext({} as ProfileContextType);
 
 export function ProfileProvider({ children }: ProfileProviderProps) {
-  const [profile, setProfile] = useState<Profile>({} as Profile);
+  const [profile, setProfile] = useState<ProfileProps>({} as ProfileProps);
+  const [oldProfile, setOldProfile] = useState<ProfileProps>(
+    {} as ProfileProps,
+  );
 
-  async function LoadProfile() {
-    const response = await fetch(
-      'http://localhost:3333/profile/1?_embed=posts',
-    );
-    const data = await response.json();
+  const fetchProfile = useCallback(async () => {
+    const response = await api.get(`/profile/1?_embed=posts`);
 
-    setProfile(data);
-  }
+    setProfile(response.data);
+    setOldProfile(response.data);
+  }, []);
+
+  const searchProfile = useCallback(
+    async (search: string) => {
+      // const response = await api.get(`/posts?title_like=^${search}`);
+      // console.log('Search dentro2', { r: response.data, s: search });
+
+      setProfile((prevState) => {
+        if (Object.keys(prevState).length > 0) {
+          return {
+            ...prevState,
+            posts: search
+              ? prevState.posts.filter((post) => post.title.includes(search))
+              : oldProfile.posts,
+          };
+        }
+
+        return prevState;
+      });
+    },
+    [oldProfile.posts],
+  );
 
   useEffect(() => {
-    LoadProfile();
-  }, [profile]);
+    fetchProfile();
+  }, [fetchProfile]);
 
   return (
-    <ProfileContext.Provider value={{ profile }}>
+    <ProfileContext.Provider value={{ profile, searchProfile }}>
       {children}
     </ProfileContext.Provider>
   );

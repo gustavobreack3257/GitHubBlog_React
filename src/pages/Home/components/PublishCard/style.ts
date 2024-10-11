@@ -30,3 +30,11 @@ export const HeaderCard = styled.div`
   flex-direction: row;
   gap: 1rem;
 `;
+
+export const Description = styled.h4`
+  text-align: start;
+  margin-top: 1.25rem;
+  font-weight: ${(props) => props.theme.FontWeight.regular};
+  font-size: ${(props) => props.theme.FontSize.MD}px;
+  color: ${(props) => props.theme['base-text']};
+`;

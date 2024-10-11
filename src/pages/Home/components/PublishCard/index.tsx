@@ -3,24 +3,31 @@ import { DescriptionText } from '../../../../components/DescriptionText';
 import { SubTitle } from '../../../../components/SubTitle';
 import { Title } from '../../../../components/Title';
 import * as S from './style';
-import { useContext } from 'react';
-import { ProfileContext } from '../../../../contexts/ProfileContext';
-export function PublishCard() {
-  const { profile } = useContext(ProfileContext);
-  return (
-    <S.PublishCardContainer>
-      <NavLink to="/Post" title="Publish Card">
-        {profile.posts.map((post) => {
-          return (
-            <S.HeaderCard key={post.id}>
-              <Title size="average" title={post.title} />
-              <SubTitle subtitle="há 1 dia" />
-            </S.HeaderCard>
-          );
-        })}
+import { PostsProps } from '../../../../contexts/ProfileContext';
+import { formatDistanceToNow } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 
-        <DescriptionText variant="postCard" />
-      </NavLink>
-    </S.PublishCardContainer>
+interface PostCardProps {
+  post: PostsProps;
+}
+export function PublishCard({ post }: PostCardProps) {
+  return (
+    <>
+      <S.PublishCardContainer>
+        <NavLink to={`/post/${post.id}`} title={post.title}>
+          <S.HeaderCard>
+            <Title size="average" title={post.title} />
+            <SubTitle
+              subtitle={formatDistanceToNow(post.createdAt, {
+                addSuffix: true,
+                locale: ptBR,
+              })}
+            />
+          </S.HeaderCard>
+
+          <S.Description>{post.description}</S.Description>
+        </NavLink>
+      </S.PublishCardContainer>
+    </>
   );
 }
